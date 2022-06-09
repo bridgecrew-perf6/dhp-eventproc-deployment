@@ -1,0 +1,28 @@
+spring:
+  mvc.pathmatch.matching-strategy: ANT_PATH_MATCHER
+  cloud:
+    azure:
+      active-directory:
+        enabled: true
+        credential:
+          client-id: 05b23345-b17a-4c50-99a1-959287ce863b
+          client-secret: E068Q~acDzKqxiwB2JptK1mZVf~wGAUhXdSAxbWE
+        profile:
+          tenant-id: d400665f-0274-46fe-899b-38ed0885144a
+        app-id-uri: api://05b23345-b17a-4c50-99a1-959287ce863b
+        authorization-clients:
+          dhp-eventproc-nifi-agent:
+            authorization-grant-type: on_behalf_of
+            scopes:
+              - api://ef73a53e-2be4-463b-a033-bbf16b6a9c3f/Obo.NifiAgent
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+    org.hibernate: ERROR
+    org.hibernate.type: TRACE
+
+server:
+  port: 8282
+
+
